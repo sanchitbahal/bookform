@@ -1,10 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Net.Http;
-using System.Collections.ObjectModel;
-using System.Collections.Specialized;
-using Xamarin.Forms;
-
-namespace Bookform
+﻿namespace Bookform
 {
 	public class Book
 	{
@@ -12,13 +6,17 @@ namespace Bookform
 
 		public string Image { get; private set; }
 
-		public Book(string name, string image)
+		public string Author { get; private set; }
+
+		public string AbstractText { get; private set; }
+
+		public Book(string name, string image, string author, string abstractText)
 		{
 			Name = name;
 			Image = image;
+			Author = author;
+			AbstractText = abstractText;
 		}
-
-		public static List<Book> All = new List<Book>();
 	}
 }
 

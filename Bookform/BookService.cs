@@ -8,7 +8,8 @@ namespace Bookform
 {
 	public class BookService : IDisposable
 	{
-		const string BOOKS_URL = "http://10.133.22.170:3000/books";
+		const string BOOKS_URL = "http://192.168.0.102:3000/books";
+//"http://10.133.22.170:3000/books";
 
 		readonly HttpClient httpClient;
 

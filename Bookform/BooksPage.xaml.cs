@@ -16,10 +16,15 @@ namespace Bookform
 		{
 			using (var service = new BookService(new HttpClient())) {
 				var books = await service.GetBooksAsync();
-				Book.All = books;
+				BindingContext = books;
 				Device.BeginInvokeOnMainThread(() => lstBooks.ItemsSource = books);
-
 			}
+		}
+
+		async void onItemTapped(object sender, ItemTappedEventArgs args)
+		{
+			var bookDetailsPage = new BookDetailsPage((Book)args.Item);
+			await Navigation.PushAsync(bookDetailsPage);
 		}
 	}
 }
