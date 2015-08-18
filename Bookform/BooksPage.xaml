@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Bookform;assembly=Bookform" x:Class="Bookform.BooksPage" Title="Book Store" Padding="10, 40, 10, 10">
+	<ContentPage.Content>
+		<ListView ItemsSource="{x:Static local:Book.All}">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<ViewCell.View>
+							<StackLayout Padding="5, 5, 5, 5" Orientation="Horizontal" Spacing="15" VerticalOptions="Center">
+								<Image Source="{Binding Image}" />
+								<Label Text="{Binding Name}" Font="Medium" VerticalOptions="Center" />
+							</StackLayout>
+						</ViewCell.View>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</ContentPage.Content>
+</ContentPage>
