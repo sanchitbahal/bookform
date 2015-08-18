@@ -16,7 +16,7 @@ namespace Bookform
 		{
 			this.httpClient = httpClient;
 		}
-			
+
 		public async Task<List<Book>> GetBooksAsync()
 		{
 			var json = await httpClient.GetStringAsync(BOOKS_URL);

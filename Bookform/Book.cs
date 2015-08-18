@@ -1,4 +1,8 @@
 ﻿using System.Collections.Generic;
+using System.Net.Http;
+using System.Collections.ObjectModel;
+using System.Collections.Specialized;
+using Xamarin.Forms;
 
 namespace Bookform
 {
@@ -14,17 +18,7 @@ namespace Bookform
 			Image = image;
 		}
 
-		public static List<Book> All { 
-			get {
-				return new List<Book> {
-					new Book("Book 1", "The_Secret"),
-					new Book("Book 2", "The_Secret"),
-					new Book("Book 3", "The_Secret"),
-					new Book("Book 4", "The_Secret"),
-					new Book("Book 5", "The_Secret")
-				}; 
-			} 
-		}
+		public static List<Book> All = new List<Book>();
 	}
 }
 

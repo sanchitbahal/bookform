@@ -1,5 +1,5 @@
 ﻿using Xamarin.Forms;
-using System.Collections.Generic;
+using System.Net.Http;
 
 namespace Bookform
 {
@@ -8,6 +8,18 @@ namespace Bookform
 		public BooksPage()
 		{
 			InitializeComponent();
+
+			getBooks();
+		}
+
+		async void getBooks()
+		{
+			using (var service = new BookService(new HttpClient())) {
+				var books = await service.GetBooksAsync();
+				Book.All = books;
+				Device.BeginInvokeOnMainThread(() => lstBooks.ItemsSource = books);
+
+			}
 		}
 	}
 }

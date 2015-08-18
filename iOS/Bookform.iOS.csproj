@@ -101,6 +101,10 @@
     <BundleResource Include="Resources\Icon-Small-40%402x.png" />
     <BundleResource Include="Resources\Icon-Small-40%403x.png" />
     <BundleResource Include="Resources\The_Secret.png" />
+    <BundleResource Include="Resources\Building_Microservices.png" />
+    <BundleResource Include="Resources\Lean_In.png" />
+    <BundleResource Include="Resources\The_Namesake.png" />
+    <BundleResource Include="Resources\Untethered_Soul.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
