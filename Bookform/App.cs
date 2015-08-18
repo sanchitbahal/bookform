@@ -21,7 +21,8 @@ namespace Bookform
 //				}
 //			};
 
-			MainPage = new BooksPage();
+//			MainPage = new BooksPage();
+			MainPage = new NavigationPage(new BooksPage());
 		}
 
 		protected override void OnStart()
